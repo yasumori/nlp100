@@ -1,0 +1,19 @@
+#!/bin/bash
+
+#10
+#output: line word characters
+#-l specifies the output
+wc -l hightemp.txt
+
+#13
+paste col1.txt col2.txt
+
+#14
+head -$1 hightemp.txt
+
+#15
+tail -$2 hightemp.txt
+
+#16
+split -$3 hightemp.txt
+
