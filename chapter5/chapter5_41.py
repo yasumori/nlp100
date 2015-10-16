@@ -21,7 +21,6 @@ class Chunk(object):
         self.morphs = list()
         self.srcs = list()
 
-
 f = open('../neko.txt.cabocha')
 
 sents=list()
