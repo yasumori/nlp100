@@ -1,5 +1,27 @@
 #!usr/bin/env python
 
+import xml.etree.ElementTree as ET
+
+tree = ET.parse('nlp.txt.xml')
+root = tree.getroot()
+
+def find_tags(parent):
+    tags = list()
+    if len(parent.getchildren()) == 0:
+        return None
+    else:
+        for child in parent.getchildren():
+            if child.tag == 'word':
+                tags.append(child.text)
+            elif child.tag == 'lemma':
+                tags.append(child.text)
+            elif child.tag == 'POS':
+                tags.append(child.text)
+                print '\t'.join(tags)
+            find_tags(child)
+find_tags(root)
+###Old Solution###
+'''
 w = list()
 for line in open('nlp.txt.xml'): 
     if len(w) < 3:
@@ -21,4 +43,4 @@ for line in open('nlp.txt.xml'):
     else:
         print '\t'.join(w)
         w = list()
-
+'''
