@@ -1,4 +1,4 @@
-#!usr/bin/env python
+#!/usr/bin/env python
 
 import xml.etree.ElementTree as ET
 from collections import defaultdict

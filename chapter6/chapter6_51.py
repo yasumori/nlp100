@@ -1,4 +1,4 @@
-#!usr/bin/env python 
+#!/usr/bin/env python 
 
 f = open("50_out")
 out = open("51_out", "w")
